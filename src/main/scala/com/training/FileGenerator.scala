@@ -20,7 +20,7 @@ object FileGenerator extends App {
   val spark = SparkSession.
     builder().
     appName("Student data Analytics").
-    master("spark://spark:7077").getOrCreate()
+    master("local").getOrCreate()
 
   println(spark.sparkContext.isLocal)
   println(spark.sparkContext.isStopped)
